@@ -3,11 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <title>Smart Home App</title>
   </head>
   <body>
-    <div id="app">
-      <h2>Hello vue</h2>
+    <div id="app"> 
+      {{title}} - {{author}} -{{age}}
+      <br>
+      <button v-on:click="age++">Increase the age</button>
+      <br>
+      <button v-on:click="age--">Decrease the age</button>
+      <div @click="title= 'something else'">Change the book title</div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

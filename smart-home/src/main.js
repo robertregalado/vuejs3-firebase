@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
+const app = Vue.createApp({
+    data() {
+        return {
+            title: "The final countdown",
+            author: "Robert de Nero",
+            age: 44
+        }
+    }
+})
 
-
-createApp(App).mount('#app')
+app.mount('#app')
