@@ -5,6 +5,13 @@ const app = Vue.createApp({
             author: "Robert de Nero",
             age: 44
         }
+    },
+    // Methods and click events
+    methods:
+    {
+        changeTitle(title_book) {
+            this.title = title_book
+        }
     }
 })
 
