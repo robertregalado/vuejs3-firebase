@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            showBooks: true,
             title: "The final countdown",
             author: "Robert de Nero",
             age: 44
@@ -9,8 +10,8 @@ const app = Vue.createApp({
     // Methods and click events
     methods:
     {
-        changeTitle(title_book) {
-            this.title = title_book
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks // conditional rendering
         }
     }
 })

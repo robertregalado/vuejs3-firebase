@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Vue</title>
+  <script src="https://unpkg.com/vue@3.0.0"></script>
+  <style>
+    .image {
+      height: 100px;
+      width: 80px;
+     
+    }
+  </style>
+</head>
+<body>
+  <h1>Mathematic's Books</h1>
+
+  <div id="app">
+    <!-- attribute binding -->
+    <!-- <a v-bind:href="url">Best website ever!</a> -->
+    <a :href="url">Rojre Github Account</a>
+
+    <div v-if="showBooks">
+      <ul>
+        <li v-for="book in books">
+          <img :src="book.img" :alt="book.title" class="image">
+          <h3>{{ book.title }}</h3>
+          <p>{{ book.author }}</p>
+        </li>
+      </ul>
+    </div>
+    <div v-else>
+      <p>Click the button below to show books</p>
+    </div>
+    
+    <button @click="toggleShowBooks">
+      <span v-if="showBooks">Hide books</span>
+      <span v-else>Show books</span>
+    </button>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
