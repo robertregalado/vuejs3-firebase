@@ -1,19 +1,5 @@
-const app = Vue.createApp({
-    data() {
-        return {
-            showBooks: true,
-            title: "The final countdown",
-            author: "Robert de Nero",
-            age: 44
-        }
-    },
-    // Methods and click events
-    methods:
-    {
-        toggleShowBooks() {
-            this.showBooks = !this.showBooks // conditional rendering
-        }
-    }
-})
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/global.css'
 
-app.mount('#app')
+createApp(App).mount('#app')
